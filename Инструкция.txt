@@ -5,7 +5,8 @@
 
     Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
     Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
-    Заходим в plugins.ini (/addons/amxmodx/configs)
+    Заходим в plugins.ini (/addons/amxmodx/configs) и вставляем строчку SpeedRunOn_TheFlag.amxx
+    Готово!
 
 /======================================Квары плагина======================================/
 
