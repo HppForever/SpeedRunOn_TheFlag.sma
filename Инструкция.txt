@@ -3,11 +3,10 @@
 
 Установка очень простая:
 
-    Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
-    Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
-    Заходим в plugins.ini (/addons/amxmodx/configs) и вставляем строчку SpeedRunOn_TheFlag.amxx
-    Перезапускаем сервер или меняем карту
-    Готово!
+    1) Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
+    2) Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
+    3) Заходим в plugins.ini (/addons/amxmodx/configs) и вставляем строчку SpeedRunOn_TheFlag.amxx
+    4) Перезапускаем сервер или меняем карту
 
 /======================================Квары плагина======================================/
 
