@@ -42,8 +42,8 @@ public plugin_init()
 /*==================================================Установка значений скоростей бега для разных оружий================================================================*/
 
 
-    Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                  // Скорость бега с "Scout"
-    Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");               // Скорость бега с ножом, пистолетами, гранатами
+    Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                      // Скорость бега с "Scout"
+    Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");                   // Скорость бега с ножом, пистолетами, гранатами
 	P90_Weapons_SpeedRun = register_cvar("Amx_P90_Weapons_SpeedRun", "269");                    // Скорость бега с "P90"
 	AUG_Weapons_SpeedRun = register_cvar("Amx_AUG_Weapons_SpeedRun", "264");                   // Скорость бега с "Aug"
 	XM1014_Weapons_SpeedRun = register_cvar("Amx_XM1014_Weapons_SpeedRun", "264");            // Скорость бега с "XM1014"
@@ -56,7 +56,7 @@ public plugin_init()
 	M249_Weapons_SpeedRun = register_cvar("Amx_M249_Weapons_SpeedRun", "242");         // Скорость бега с "M249" 
 	Awp_Weapons_SpeedRun = register_cvar("Amx_Weapons_SpeedRun", "231");              // Скорость бега с "Awp"
 	G3SG1_Weapons_SpeedRun = register_cvar("Amx_G3SG1_Weapons_SpeedRun", "231");     // Скорость бега с "G3sg1"
-    SG550_Weapons_SpeedRun = register_cvar("Amx_SG550_Weapons_SpeedRun", "231");    // Скорость бега с "SG550"	
+    SG550_Weapons_SpeedRun = register_cvar("Amx_SG550_Weapons_SpeedRun", "231");        // Скорость бега с "SG550"	
 
     RegisterHam(Ham_Spawn, "player", "PlayerSpawn", 1); // Отлавливаем спавн игрока дабы дать ему скорость (если конечно у него присутствуют флаги доступа с макроса)
     register_event("CurWeapon", "Event_Cur_Weapon", "be", "1=1");
