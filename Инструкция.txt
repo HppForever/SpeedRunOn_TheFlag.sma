@@ -1,0 +1,29 @@
+Требований к плагину нету, кроме обычного AMXX любой версии
+Квары добавляем в server.cfg.
+
+Установка очень простая:
+
+    Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
+    Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
+    Заходим в plugins.ini (/addons/amxmodx/configs)
+
+/======================================Квары плагина======================================/
+
+SpeedRunOn_TheFlag_Enable      (по умолчанию "1")
+AccessFlag_SpeedRun            (по умолчанию "pnm")
+
+Amx_Scout_Weapons_SpeedRun     (по умолчанию "286")
+Amx_Normal_Weapons_SpeedRun    (по умолчанию "275")
+Amx_P90_Weapons_SpeedRun       (по умолчанию "269")
+Amx_AUG_Weapons_SpeedRun       (по умолчанию "264")
+Amx_XM1014_Weapons_SpeedRun    (по умолчанию "264")
+Amx_Famas_Weapons_SpeedRun     (по умолчанию "264")
+Amx_GalilAR_Weapons_SpeedRun   (по умолчанию "264")
+Amx_SG552_Weapons_SpeedRun     (по умолчанию "258")
+Amx_M3_Weapons_SpeedRun        (по умолчанию "253")
+Amx_M4A1_Weapons_SpeedRun      (по умолчанию "253")
+Amx_AK_47_Weapon_SpeedRuns     (по умолчанию "253")
+Amx_M249_Weapons_SpeedRun      (по умолчанию "242")
+Amx_Weapons_SpeedRun           (по умолчанию "231")
+Amx_G3SG1_Weapons_SpeedRun     (по умолчанию "231")
+Amx_SG550_Weapons_SpeedRun     (по умолчанию "231")
