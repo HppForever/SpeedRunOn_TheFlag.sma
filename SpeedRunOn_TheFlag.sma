@@ -42,8 +42,8 @@ public plugin_init()
 /*==================================================Установка значений скоростей бега для разных оружий================================================================*/
 
 
-    Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                      // Скорость бега с "Scout"
-    Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");                   // Скорость бега с ножом, пистолетами, гранатами
+        Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                  // Скорость бега с "Scout"
+        Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");               // Скорость бега с ножом, пистолетами, гранатами
 	P90_Weapons_SpeedRun = register_cvar("Amx_P90_Weapons_SpeedRun", "269");                    // Скорость бега с "P90"
 	AUG_Weapons_SpeedRun = register_cvar("Amx_AUG_Weapons_SpeedRun", "264");                   // Скорость бега с "Aug"
 	XM1014_Weapons_SpeedRun = register_cvar("Amx_XM1014_Weapons_SpeedRun", "264");            // Скорость бега с "XM1014"
