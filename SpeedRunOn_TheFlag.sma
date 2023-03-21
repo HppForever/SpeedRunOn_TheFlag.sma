@@ -26,7 +26,7 @@ new SG550_Weapons_SpeedRun;      // Объявляем переменную "SG5
 new SG552_Weapons_SpeedRun;     // Объявляем переменную "SG552_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "SG552"
 new XM1014_Weapons_SpeedRun;   // Объявляем переменную "XM1014_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "XM1014"
 new bool: g_HaveSpeed[33];    // Объявляем булевый массив "g_HaveSpeed" нужный для корректной работы установки скорости бега игроку с флагами
-new AccessFlag_SpeedRun[24];             // Объявляем массив "AccessFlag_SpeedRun" типа "string" который будет хранить в себе флаги доступа к функции этого плагина
+new AccessFlag_SpeedRun[24]; // Объявляем массив "AccessFlag_SpeedRun" типа "string" который будет хранить в себе флаги доступа к функции этого плагина
 
 public plugin_init()
 
