@@ -2,16 +2,16 @@
 Квары добавляем в server.cfg или amxx.cfg.
 
 Установка очень простая:
-
-    1) Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
-    2) Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
-    3) Заходим в plugins.ini (/addons/amxmodx/configs) и вставляем строчку SpeedRunOn_TheFlag.amxx
-    4) Перезапускаем сервер или меняем карту
+    
+    1) В восьмой строке исходника изменяем флаги под себя и сохраняем
+    2) Компилируем SpeedRunOn_TheFlag.sma в любом онлайн или локальном компиляторе AMXX версии 1.8.1 - 1.8.3
+    3) Перекидываем SpeedRunOn_TheFlag.amxx в папку /addons/amxmodx/plugins
+    4) Заходим в plugins.ini (/addons/amxmodx/configs) и вставляем строчку SpeedRunOn_TheFlag.amxx
+    5) Перезапускаем сервер или меняем карту
 
 /======================================Квары плагина======================================/
 
 SpeedRunOn_TheFlag_Enable      (по умолчанию "1")
-AccessFlag_SpeedRun            (по умолчанию "pnm")
 
 Amx_Scout_Weapons_SpeedRun     (по умолчанию "286")
 Amx_Normal_Weapons_SpeedRun    (по умолчанию "275")
