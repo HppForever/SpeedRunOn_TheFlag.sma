@@ -58,7 +58,7 @@ public plugin_init()
 	G3SG1_Weapons_SpeedRun = register_cvar("Amx_G3SG1_Weapons_SpeedRun", "231");     // Скорость бега с "G3sg1"
         SG550_Weapons_SpeedRun = register_cvar("Amx_SG550_Weapons_SpeedRun", "231");    // Скорость бега с "SG550"	
 
-    RegisterHam(Ham_Spawn, "player", "PlayerSpawn", 1); // Отлавливаем спавн игрока дабы дать ему скорость (если конечно у него присутствуют флаги доступа с макроса)
+    RegisterHam(Ham_Spawn, "player", "PlayerSpawn", 1); // Отлавливаем спавн игрока дабы дать ему скорость
     register_event("CurWeapon", "Event_Cur_Weapon", "be", "1=1");
 }
 
