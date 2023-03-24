@@ -5,36 +5,34 @@
 #include <hamsandwich>
 #include <fun>
 
+#define AccessFlag_SpeedRun ADMIN_LEVEL_D|get_user_flags(id) & ADMIN_LEVEL_B| get_user_flags(id) & ADMIN_LEVEL_A
+
 
 /*===========================Объявляем гл. переменные для скорости бега с различными оружиями, в методе plugin_init установим ним значения============================*/
 
 
-new Enable_Plugin;                            // Объявляем переменную "Enable_Plugin" для функции on/off плагина
-new Normal_Weapons_SpeedRun;                 // Объявляем переменную "Normal_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с ножом и тд
-new Awp_Weapons_SpeedRun;                   // Объявляем переменную "Awp_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AWP"
-new AK_47_Weapons_SpeedRun;                // Объявляем переменную "AK_47_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AK47"
-new AUG_Weapons_SpeedRun;                 // Объявляем переменную "AUG_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AUG"
-new Famas_Weapons_SpeedRun;              // Объявляем переменную "Famas_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Famas"
-new GalilAR_Weapons_SpeedRun;           // Объявляем переменную "GalilAR_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Galil"
-new G3SG1_Weapons_SpeedRun;            // Объявляем переменную "G3SG1_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "G3SG1"
-new Scout_Weapons_SpeedRun;           // Объявляем переменную "Scout_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Scout"
-new M249_Weapons_SpeedRun;           // Объявляем переменную "M249_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M249"
-new M3_Weapons_SpeedRun;            // Объявляем переменную "M3_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M3"
-new M4A1_Weapons_SpeedRun;         // Объявляем переменную "M4A1_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M4A1"
-new P90_Weapons_SpeedRun;         // Объявляем переменную "P90_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "P90"
-new SG550_Weapons_SpeedRun;      // Объявляем переменную "SG550_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "SG550"
-new SG552_Weapons_SpeedRun;     // Объявляем переменную "SG552_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "SG552"
-new XM1014_Weapons_SpeedRun;   // Объявляем переменную "XM1014_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "XM1014"
-new bool: g_HaveSpeed[33];    // Объявляем булевый массив "g_HaveSpeed" нужный для корректной работы установки скорости бега игроку с флагами
-new AccessFlag_SpeedRun[24]; // Объявляем массив "AccessFlag_SpeedRun" типа "string" который будет хранить в себе флаги доступа к функции этого плагина
+new Enable_Plugin;                             // Объявляем переменную "Enable_Plugin" для функции on/off плагина
+new Normal_Weapons_SpeedRun;                  // Объявляем переменную "Normal_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с ножом и тд
+new Awp_Weapons_SpeedRun;                    // Объявляем переменную "Awp_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AWP"
+new AK_47_Weapons_SpeedRun;                 // Объявляем переменную "AK_47_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AK47"
+new AUG_Weapons_SpeedRun;                  // Объявляем переменную "AUG_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "AUG"
+new Famas_Weapons_SpeedRun;               // Объявляем переменную "Famas_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Famas"
+new GalilAR_Weapons_SpeedRun;            // Объявляем переменную "GalilAR_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Galil"
+new G3SG1_Weapons_SpeedRun;             // Объявляем переменную "G3SG1_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "G3SG1"
+new Scout_Weapons_SpeedRun;            // Объявляем переменную "Scout_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "Scout"
+new M249_Weapons_SpeedRun;            // Объявляем переменную "M249_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M249"
+new M3_Weapons_SpeedRun;             // Объявляем переменную "M3_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M3"
+new M4A1_Weapons_SpeedRun;          // Объявляем переменную "M4A1_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "M4A1"
+new P90_Weapons_SpeedRun;          // Объявляем переменную "P90_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "P90"
+new SG550_Weapons_SpeedRun;       // Объявляем переменную "SG550_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "SG550"
+new SG552_Weapons_SpeedRun;      // Объявляем переменную "SG552_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "SG552"
+new XM1014_Weapons_SpeedRun;    // Объявляем переменную "XM1014_Weapons_SpeedRun" значение которой является скорость привилегейного игрока с "XM1014"
+new bool: g_HaveSpeed[33];     // Объявляем булевый массив "g_HaveSpeed" нужный для корректной работы установки скорости бега игроку с флагами
 
 public plugin_init()
 
 {
     register_plugin("SpeedRunOn_TheFlag", "1.0", "hpp forever"); // Автор плагина
-	
-	register_cvar("AccessFlag_SpeedRun","pnm"); // Объявляем квар который будет отвечать за флаги доступа к функции этого плагина
-	get_cvar_string("AccessFlag_SpeedRun", AccessFlag_SpeedRun, charsmax(AccessFlag_SpeedRun)); // Читаем и записываем данные из квара "AccessFlag_SpeedRun" в массив "AccessFlag_SpeedRun"
 	
     Enable_Plugin = register_cvar("SpeedRunOn_TheFlag_Enable", "1"); // Объявляем квар который будет отвечать за on/off плагина (1 - включить, 0 - выключить)
 	
@@ -42,8 +40,8 @@ public plugin_init()
 /*==================================================Установка значений скоростей бега для разных оружий================================================================*/
 
 
-        Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                  // Скорость бега с "Scout"
-        Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");               // Скорость бега с ножом, пистолетами, гранатами
+    Scout_Weapons_SpeedRun = register_cvar("Amx_Scout_Weapons_SpeedRun", "286");                  // Скорость бега с "Scout"
+    Normal_Weapons_SpeedRun = register_cvar("Amx_Normal_Weapons_SpeedRun", "275");               // Скорость бега с ножом, пистолетами, гранатами
 	P90_Weapons_SpeedRun = register_cvar("Amx_P90_Weapons_SpeedRun", "269");                    // Скорость бега с "P90"
 	AUG_Weapons_SpeedRun = register_cvar("Amx_AUG_Weapons_SpeedRun", "264");                   // Скорость бега с "Aug"
 	XM1014_Weapons_SpeedRun = register_cvar("Amx_XM1014_Weapons_SpeedRun", "264");            // Скорость бега с "XM1014"
@@ -52,13 +50,13 @@ public plugin_init()
 	SG552_Weapons_SpeedRun = register_cvar("Amx_SG552_Weapons_SpeedRun", "258");           // Скорость бега с "SG552"
 	M3_Weapons_SpeedRun = register_cvar("Amx_M3_Weapons_SpeedRun", "253");                // Скорость бега с "M3"
 	M4A1_Weapons_SpeedRun = register_cvar("Amx_M4A1_Weapons_SpeedRun", "253");           // Скорость бега с "M4A1" 
-	AK_47_Weapons_SpeedRun = register_cvar("Amx_AK_47_Weapon_SpeedRuns", "243");        // Скорость бега с "AK47"
+	AK_47_Weapons_SpeedRun = register_cvar("Amx_AK_47_Weapon_SpeedRuns", "253");        // Скорость бега с "AK47"
 	M249_Weapons_SpeedRun = register_cvar("Amx_M249_Weapons_SpeedRun", "242");         // Скорость бега с "M249" 
 	Awp_Weapons_SpeedRun = register_cvar("Amx_Weapons_SpeedRun", "231");              // Скорость бега с "Awp"
 	G3SG1_Weapons_SpeedRun = register_cvar("Amx_G3SG1_Weapons_SpeedRun", "231");     // Скорость бега с "G3sg1"
-        SG550_Weapons_SpeedRun = register_cvar("Amx_SG550_Weapons_SpeedRun", "231");    // Скорость бега с "SG550"	
+    SG550_Weapons_SpeedRun = register_cvar("Amx_SG550_Weapons_SpeedRun", "231");    // Скорость бега с "SG550"	
 
-    RegisterHam(Ham_Spawn, "player", "PlayerSpawn", 1); // Отлавливаем спавн игрока дабы дать ему скорость
+    RegisterHam(Ham_Spawn, "player", "PlayerSpawn", 1); // Отлавливаем спавн игрока дабы дать ему скорость (если конечно у него присутствуют флаги доступа с макроса)
     register_event("CurWeapon", "Event_Cur_Weapon", "be", "1=1");
 }
 
@@ -71,7 +69,7 @@ public PlayerSpawn(id)
 			return; // Возврат пустого значения из метода "PlayerSpawn" (завершение работы плагина)
 		}
 
-    if (get_user_flags(id) & read_flags("AccessFlag_SpeedRun")) // Если у игрока есть хоть один флаг из "AccessFlag_SpeedRun" - будет вызвана функция "Set_UserSpeed"
+    if (get_user_flags(id) & AccessFlag_SpeedRun) // Если у игрока есть хоть один флаг из "AccessFlag_SpeedRun" - будет вызвана функция "Set_UserSpeed"
 		
         {
            g_HaveSpeed[id] = true;
@@ -94,7 +92,7 @@ public Set_UserSpeed(id)
 			return; // Возврат пустого значения из метода "Set_UserSpeed" (завершение работы плагина)
 		}
 		
-	    if(!(get_user_flags(id) & read_flags("AccessFlag_SpeedRun"))) // Проверки на флаги, если флаг не будет найден у пользователя - он не получит доступ к функции плагина
+	    if(!(get_user_flags(id) & AccessFlag_SpeedRun)) // Проверки на флаги, если флаг не будет найден у пользователя - он не получит доступ к функции плагина
 		
 	    {
 		    return; // Возврат пустого значения из метода "Set_UserSpeed" (завершение работы плагина)
